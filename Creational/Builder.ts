@@ -1,6 +1,8 @@
+// Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.
+
 class House {
   roof = '';
-  walls = [];
+  walls: string[] = [];
 
   constructor() {
     this.buildRoof();
@@ -18,4 +20,3 @@ class House {
     this.walls.push(type);
   }
 }
-

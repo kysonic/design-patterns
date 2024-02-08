@@ -1,3 +1,5 @@
+// Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
+
 // Just object
 const mySingleton = {
   property1: 'something',
@@ -9,12 +11,12 @@ const mySingleton = {
 
 // Unity like
 class AudioManager {
-  static instance; 
+  static instance;
 
-  #volume = 1;
-  
+  private _volume = 1;
+
   constructor(volume) {
-     this.#volume = volume;
+    this._volume = volume;
   }
 
   static init(volume) {
@@ -22,7 +24,7 @@ class AudioManager {
   }
 
   increaseVolume() {
-    this.#volume += 0.1;
+    this._volume += 0.1;
   }
 }
 
